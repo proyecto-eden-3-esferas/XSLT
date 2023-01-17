@@ -2,11 +2,26 @@
 
 Stylesheets, snippets and guidelines for transforming between and inside DocBook, HTML, possibly also JSON
 
-XSLT is a "language" for transforming from some XML to other XML or to anything else. XML is a syntax specification for writing texts but also images (SVG), music score (MusicML), mathematical formulas (MathML), even databases. SVG, MusicML, and MathML are just vocabularies. HTML is the XML vocabulary web pages are written in.
+XSLT is a _language_ for transforming from some XML to other XML or to anything else. __XML__ is a syntax specification for writing texts as well as images (SVG), music score (MusicML), mathematical formulas (MathML), even databases. SVG, MusicML, and MathML are just vocabularies. HTML is the XML vocabulary web pages are written in.
+
+I shall be using the free xsltproc command to effect transformations. Basic usage:
+
+```
+xsltproc my-stylesheet.xsl file-to-be-transformed.xml > resulting-file.xml
+```
+
+or
+
+
+```
+xsltproc --output resulting-file.xml my-stylesheet.xsl file-to-be-transformed.xml 
+```
+
+
 
 ## Producing Atomic Texts and a Graph thereof
 
-My goal is to produce ==atomic texts==, that is short texts that can stand on their own. These must also point to other texts so that they make up a network or ==graph==. And they must be in the format of a webpage or HTML file (e.g. "my-file.html") that follows some guidelines for simplicity, ease of processing and styling and so on.
+My goal is to produce __atomic texts__, that is short texts that can stand on their own. These must also point to other texts so that they make up a network or __graph__. And they must be in the format of a webpage or HTML file (e.g. "my-file.html") that follows some guidelines for simplicity, ease of processing and styling and so on.
 
 Also and importantly, I want to document the process of creating and transforming atomic texts.
 
@@ -16,6 +31,8 @@ My purpose in doing this is to enable the creation of a graph as well as alterna
 ## From DocBook to HTML
 
 I have compiled some relevant notes from DocBook XSL: The Complete Guide, Bob Stayton 2007, which teaches how to apply a 20MB bundle of XSLT stylesheets. The stylesheets are made available free of charge and rely on XSLT version 1.0.
+
+I intend to provide some templates for transformations, guidelines for writing a suitable Makefile, and some definitive XSLT stylesheets that import the aforementioned stylesheets.
 
 
 ## Other Transformations
