@@ -27,6 +27,7 @@ Also and importantly, I want to document the process of creating and transformin
 
 My purpose in doing this is to enable the creation of a graph as well as alternative graphs and subgraphs on clues given by XML attributes.
 
+Actually, this approach looks very much like **zettelkasten** or slipnotes...
 
 ## From DocBook to HTML
 
@@ -36,16 +37,13 @@ I intend to provide some templates for transformations, guidelines for writing a
 
 
 ## Other Transformations
-- From XML to JSON. Something like:
-  ```
-  <json-obj>
-    <pair>
-      <key>First Name</key>
-      <value>Sonia</value>
-    </pair>
-    ...
-  </json-obj>
-  ```
-- Removing comments (so as to hide information)
-- Removing (block) elements with a given attribute, (`privacy-level`), or where a given attribute is assigned a given value (`privacy-level="intimate"`)
+1. From XML to JSON. Some features of this transformation:
+  * an XML element transform into a JSON object
+  * such a JSON object has "name", "attributes" (an array of, for example length-2 subarrays), and "content" keys
+  * "content" is an array
+3. Removing comments (so as to hide information): `<xsl:template match="comment()"/>`
+4. Removing (block) elements with a given attribute, (`privacy-level`), or where a given attribute is assigned a given value (`privacy-level="intimate"`), through, again, empty templates like:
+```
+<xsl:template match="*[@privacy-level='intimate']"/>
+```
 
