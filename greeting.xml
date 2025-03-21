@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="greeting.xsl" type="text/xsl"?>
+<greeting>
+  Hello, World!
+  <para class="private"> Hello, <emphasis>Private</emphasis>!</para>
+  <para class="public"> Hello, <emphasis>dear</emphasis> Public!</para>
+</greeting>

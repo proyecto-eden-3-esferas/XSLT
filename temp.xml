@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this is a commentary -->
+  <book>
+  <title>Synthesis</title>
+  <para>Feed TeX these characters: </para>
+  <!-- <para>Feed TeX these characters: \\&amp;\\#\\$\\%\\^\\_\\{\\} </para> -->
+  <preface>
+    <title>Introducci\'on</title>
+    <para>The <quote>purpose</quote> of this <sgmltag>book</sgmltag> is...</para>
+  </preface>
+  
+  <?postscript gsave newpath 100 100 moveto 33 0 rlineto stroke grestore?>
+
+  <part>
+    <title>Ciencia y Tecnolog\'\i{}a</title>
+    <para>La tecnolog\'\i{}a aplica <!--<footnote>enti\'endase con ello lo que se entienda...</footnote>--> la ciencia. </para>
+    <para>I love <userinput>\TeX</userinput>.</para>
+    <chapter class="private">
+      <title>Ciencia</title>
+      <para>Here's  a spaced  out
+
+        paragraph...
+      </para>
+      <equation><alt>\epsilon > 0</alt></equation>
+      <para>Here's a <sgmltag>sgmltag</sgmltag>...</para>
+      <para>Here's <emphasis>another</emphasis> paragraph...</para>
+      <programlisting>mov R1, R2;
+cmp \#0, R1;</programlisting>
+    </chapter>    
+    <chapter>
+      <title>Tecnolog\'\i{}a</title>
+      <para>Here's a technological paragraph...</para>
+      <blockquote>
+        <para>Here's a technological blockquote...</para>
+        <attribution>Whoever</attribution>
+      </blockquote>
+      <itemizedlist>
+        <listitem>first item</listitem>
+        <listitem>second item</listitem>
+        <listitem>third item</listitem>
+      </itemizedlist>
+      <para>Here's <emphasis>another</emphasis> paragraph...</para>
+    </chapter>    
+    <chapter>
+      <title>Etica</title>
+      <para>Here's a paragraph...</para>
+      <blockquote>Here's a quote...</blockquote>
+      <para>Here's another paragraph...</para>
+      <sect1> <title>Aristoteles</title> <para>Arrr</para></sect1>
+      <sect1> <title>Plotinus</title>
+        <sect2><title>Early Plotinus</title><para>P1...</para></sect2>
+        <sect2><title>Late Plotinus</title><para>P2...</para></sect2>
+      </sect1>
+    </chapter>    
+  </part>
+
+  <part lang='es'>
+    <title>Religi\'on</title>
+    <para></para>
+  </part>
+
+  <glossary>
+    <heading>wallaby</heading><definition>small kangaroo</definition>
+    <heading>ensnare</heading><definition>trap</definition>
+  </glossary>
+
+</book>

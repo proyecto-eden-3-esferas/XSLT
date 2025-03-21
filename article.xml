@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../../docbook.css"?>
+<!DOCTYPE book SYSTEM "/home/francisco/Documents/mis_escritos/precious/xml/DocBook/docbook.dtd">
+<article xmlns='http://docbook.org/ns/docbook'>
+<title>Example of an annotation</title>
+<annotation xml:id="note-parts-list">
+<para>This list is not comprehensive.</para>
+</annotation>
+<para annotations="note-parts-list">
+An automobile contains an engine,
+wheels, doors, and windows.
+</para>
+</article>

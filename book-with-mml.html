@@ -1,0 +1,442 @@
+<!-- A book in the DocBook vocabulary.
+     Elements: book, preface, part, chapter, title, para,
+               programlisting, blockquote, attribution,
+               itemizedlist, listitem, glossary
+     Processing Instruction: name=postscript
+
+     The purpose of this file is for other tools to test XSLT transformations on it.
+-->
+<html>
+  
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sample DocBook</title>
+</head>
+
+<body>
+<nav class="toc"><ol>
+<li>Sample DocBook</li>
+<li>Introduction</li>
+<a href="#docbook-element-examples"><li>DocBook Element Examples</li></a><a href="#science-and-technology"><li>(P1) Science and Technology</li></a><li>(P2) Religion</li>
+<li>Tables in DocBook</li>
+</ol></nav>
+
+  <header>
+    <h1><em>Sample DocBook</em></h1>
+    <h2>A DocBook Document to Transform</h2>
+    <div class="abstract">
+      <p>This is a book holding DocBook elements for testing transformations. The abstract inside the info element under the book element contains text, not para[graph]s and other block elements containing text.</p>
+      <equation>
+<h4>My MathML example</h4>
+<mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+  <mml:mrow>
+    <mml:mo>∑</mml:mo>
+    <mml:mn>4</mml:mn>
+    <mml:mo>+</mml:mo>
+    <mml:mi>x</mml:mi>
+  </mml:mrow>
+</mml:math>
+</equation>
+      
+        
+          <!--<imagedata format='JPEG' fileref='my_image.jpg'/>-->
+        
+        <h3>An image</h3>
+      
+    </div>
+
+    <h3 class="keywords-header">keywords: </h3>
+<ul class="keywordset">
+<li>testing</li>
+<li>docbook</li>
+<li>XSLT</li>
+</ul>
+
+    <h3 class="subjectset-header">Subject sets:</h3>
+<ul class="subjectset" scheme="libraryofcongress">
+      <li>Electronic Publishing; Rhethoric for Non-Fiction Writers</li>
+      <li>SGML (Computer program language); XML (a Syntax for Languages); HTML (a SubSet of XML for the WWW)</li>
+    </ul>
+
+    <p class="author"><b>Authorship/Autoría: </b>
+      
+        Mr
+        Francisco
+        Fernández-Victorio Hernández
+      ; 
+      
+        ATI
+        Senior Application Analyst
+        Permaculture, Org.
+        Design and Implementation
+      ; 
+    </p>
+
+
+
+  </header>
+
+  <p><dfn class="firstterm">Synthesis</dfn> is a greek word meaning... (entity string1 points to file <cite class="filename">string1.txt</cite>, which actually holds <q>whatever
+</q></p>
+  <p>Feed TeX these characters: &amp; # $ % ^ _ \ { } <!-- \ { and }--> </p>
+  
+  <section class="preface">
+    <h2>Introduction</h2>
+    <p>The <q>purpose</q> of this is to test DocBook code and XSLT transformations.</p>
+  </section>
+  
+  
+  
+
+  <section class="part" id="docbook-element-examples">
+    <header>
+      <h1>DocBook Element Examples</h1>
+    </header>
+
+    <section class="chapter">
+      <h2>Tables</h2>
+
+      <table id="an-HTML-table">
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+      </table>
+
+      <table id="another-HTML-table" SQL-table="people" SQL-db="organization">
+        <tr>
+          <th>Co</th>
+          <th>Cntct</th>
+          <th>Cntry</th>
+        </tr>
+        <tr>
+          <td>Futterkiste</td>
+          <td>Anders</td>
+          <td>De</td>
+        </tr>
+        <tr>
+          <td>CC Moctezuma</td>
+          <td>Fco Chang</td>
+          <td>Mxc</td>
+        </tr>
+      </table>
+
+    </section>
+
+    <section class="chapter">
+      <h2>Lists*</h2>
+
+      <bridgehead>A &lt;procedure&gt;:</bridgehead>
+      <div class="procedure">
+<h4>An Example Procedure</h4>
+<ol>
+<li><p>A Step</p></li>
+<li>
+<p>Another Step</p>
+<ol class="substeps"><li class="step"><p>Substeps can be nested indefinitely deep.</p></li></ol>
+</li>
+<li><p>A Final Step</p></li>
+</ol>
+</div>
+
+      <bridgehead>A qandaset with no qandadiv's</bridgehead>
+      <section><dl>
+          <dt class="question">Is there a God?</dt>
+          <dd class="answer">What do you mean by <q>god</q>?</dd>
+        <hr>
+          <dt class="question">Is there a Creator?</dt>
+          <dd class="answer">Perhaps the world created itself.</dd>
+        <hr>
+          <dt class="question">No. The matter requires that something above the thing creates the thing.</dt>
+          <dd class="answer">Well, perhaps that <q>something above the thing</q> is in the thing.</dd>
+        <hr>
+          <dt class="question">question</dt>
+          <dd class="answer">answer</dd>
+        </dl></section>
+
+
+      <bridgehead>A qandaset with two qandadiv's</bridgehead>
+      <section class="qandaset">
+          
+            <dt class="question">Is there a God?</dt>
+            <dd class="answer">What do you mean by <q>god</q>?</dd>
+          
+          
+            <dt class="question">Is there a Creator?</dt>
+            <dd class="answer">Perhaps the world created itself.</dd>
+          
+          
+            <dt class="question">No. The matter requires that something above the thing creates the thing.</dt>
+            <dd class="answer">Well, perhaps that <q>something above the thing</q> is in the thing.</dd>
+          
+          
+            <dt class="question">question</dt>
+            <dd class="answer">answer</dd>
+          
+        <hr>
+<hr>
+          
+            <dt class="question">Where were you then?</dt>
+            <dd class="answer">I was very far away, in the mountains.</dd>
+          
+          
+            <dt class="question">What were you doing in the mountains?</dt>
+            <dd class="answer">I was having a skiing holiday.</dd>
+          
+          
+            <dt class="question">How can you be so sure about the exact time it happened then?</dt>
+            <dd class="answer">I was speaking to her on the phone when suddenly her voice broke.</dd>
+          
+          
+            <dt class="question">question</dt>
+            <dd class="answer">answer</dd>
+          
+        </section>
+
+
+    </section>
+
+    <section class="chapter">
+      <h2>Glossaries*</h2>
+
+      <dl class="glossary">
+        <h3 class="glossary-title">Example Glossary</h3>
+        <p>This is not a real glossary, it's just an example.</p>
+        ...
+        <section class="glossdiv"><dl class="glossdiv-dl"><div class="glossentry">
+<dt class="glossterm">Extensible Markup Language</dt>
+<dd class="glossentry-body">
+<abbr class="acronym">XML</abbr><div class="glossdef">
+              <p>Some reasonable definition here.</p>
+              <p class="glossseealso" otherterm="sgml">SGML</p>
+            </div>
+</dd>
+</div></dl></section>
+        ...
+        <section class="glossdiv"><dl class="glossdiv-dl">
+<div class="glossentry">
+<dt class="glossterm">SGML</dt>
+<dd class="glossentry-body"><p class="glosssee" otherterm="sgml"></p></dd>
+</div>
+<div class="glossentry">
+<dt class="glossterm">Standard Generalized Markup Language</dt>
+<dd class="glossentry-body">
+<abbr class="acronym">SGML</abbr><abbr class="abbrev">ISO 8879:1986</abbr><div class="glossdef">
+              <p>Some reasonable definition here.</p>
+              <p class="glossseealso" otherterm="xml">XML</p>
+            </div>
+</dd>
+</div>
+</dl></section>
+      </dl>
+
+    </section>
+
+    <section class="chapter">
+      <h2>Mathematics*</h2>
+    </section>
+
+    <section class="chapter">
+      <h2>SVG*</h2>
+    </section>
+
+    <section class="chapter">
+      <h2>Other*</h2>
+      <div class="note" style="border-style: solid;">Herein live other DocBook elements that want tranforming into HTML...</div>
+      <div class="tip" style="border-style: solid;">I'll give you some valuable piece of advice...</div>
+    </section>
+
+  </section>
+  
+  <section class="part" id="science-and-technology">
+    <h1 linkend="www.google.com">(P1) Science and Technology</h1>
+    <p>Technology means applied science.<!--<footnote>entiéndase con ello lo que se entienda...</footnote>--></p>
+    <p>I love <kbd class="userinput">\TeX</kbd>.</p>
+    
+    <section class="private">
+      <h2>Science</h2>
+      <h3>A compendium of knowledge</h3>
+      <p>Here's  a spaced  out
+
+        paragraph...
+      </p>
+      <equation><alt>\epsilon &gt; 0</alt></equation>
+      <p>Here's a <sgmltag>sgmltag</sgmltag>...</p>
+      <p>Here's <em>another</em> paragraph...</p>
+      <code>mov R1, R2;
+cmp #0, R1;</code>
+
+       <bridgehead>Some lists</bridgehead>
+       <p>First, a docbook:variablelist:</p>
+       <dl class="variablelist">
+<dt>TERMNAME</dt>
+<dd>CONTENTS OR LONGER DESCRIPTION</dd>
+</dl>
+    </section>    
+    
+    <section class="chapter">
+      <h2>Technology</h2>
+      <p>Here's a technological paragraph...</p>
+      <blockquote>
+        <p>Here's a technological blockquote...</p>
+        <p class="attribution">Whoever</p>
+      </blockquote>
+      <ul class="itemizedlist">
+        <dd>first item</dd>
+        <dd>second item</dd>
+        <dd>third item</dd>
+      </ul>
+      <p>Here's <em>another</em> paragraph...</p>
+    </section>    
+    
+    <section class="chapter">
+      <h2>Ethics</h2>
+      <p>Here's a paragraph...</p>
+      <blockquote>Here's a quote...</blockquote>
+      <p>Here's another paragraph...</p>
+      <section class="sect1"> <h3>Aristoteles</h3> <p>Arrr</p></section>
+      <section class="sect1"> <h3>Plotinus</h3>
+        <section class="sect2"><h4>Early Plotinus</h4>
+<p>P1...</p></section>
+        <section class="sect2"><h4>Late Plotinus</h4>
+<p>P2...</p></section>
+      </section>
+    </section>    
+    
+  </section>
+
+  <section class="part" lang="es">
+    <h1>(P2) Religion</h1>
+    <p xml:lang="html">Should religion teaches us how to lead our lives?</p>
+  </section>
+  
+  <section class="appendix">
+    <h2>Tables in DocBook</h2>
+    <p>Tables cannot be displayed in the EPUB format, so this appendix is written with typographical systems (TeX) in mind.</p>
+    
+    <section class="sect1">
+      <h3>HTML Tables</h3>
+      <p>First, I shall present some very simle tables. Our first table is made up of <kbd class="userinput">row</kbd> elements holding <kbd class="userinput">th</kbd> elements:</p>
+      <table style="width:100%">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+        </table>
+
+    </section>
+      
+      
+    <section class="sect1">
+      <h3>CALS Tables</h3>
+      <p>A CALS table has a <kbd class="userinput">tgroup</kbd> element, thereby to be distinquished from HTML tables.</p>
+    <!--
+    
+    The Table element identifies a formal table. DocBook uses the CALS table model, which describes tables geometrically using rows, columns, and cells.
+    Tables may include column headers and footers, but there is no provision for row headers. 
+    
+    Attributes besides common attributes and linking attributes:
+    colsep
+    floatstyle
+    frame = { “all” | “bottom” | “none” | “sides” | “top” | “topbot” }
+    orient = { “land” | “port” }
+    pgwide = { “0” | “1” }
+    rowheader = { “firstcol” | “norowheader” }
+    rowsep
+    shortentry = { “0” | “1”}
+    tabstyle
+    tocentry = { “0” | “1” }
+    -->
+    
+    
+      <table id="ex.calstable" frame="all">
+        <h4>Sample CALS Table</h4>
+
+        <tgroup cols="5" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"></colspec>
+          <colspec colname="c2"></colspec>
+          <colspec colname="c3"></colspec>
+          <colspec colnum="5" colname="c5"></colspec>
+          
+          <thead>
+            <row>
+              <entry namest="c1" nameend="c2" align="center">Horizontal Span</entry>
+              <entry>a3</entry>
+              <entry>a4</entry>
+              <entry>a5</entry>
+            </row>
+          </thead>
+          
+          <tfoot>
+            <row>
+              <entry>f1</entry>
+              <entry>f2</entry>
+              <entry>f3</entry>
+              <entry>f4</entry>
+              <entry>f5</entry>
+            </row>
+          </tfoot>
+          
+          <tbody>
+            <row>
+              <entry>b1</entry>
+              <entry>b2</entry>
+              <entry>b3</entry>
+              <entry>b4</entry>
+              <entry morerows="1" valign="middle"><p>Vertical Span</p></entry>
+            </row>
+            <row>
+              <entry>c1</entry>
+              <entry namest="c2" nameend="c3" align="center" morerows="1" valign="bottom">Span Both</entry>
+              <entry>c4</entry>
+            </row>
+            <row>
+              <entry>d1</entry>
+              <entry>d4</entry>
+              <entry>d5</entry>
+            </row>
+          </tbody>
+          
+        </tgroup>
+        
+      </table>  <!-- end of CALS 'table' element -->
+      
+    </section>  <!-- end of "CALS Tables" -->
+
+  </section>
+
+  <dl class="glossary">
+    <glossentry>
+    <dt class="glossterm">wallaby</dt>
+<div class="glossdef">small kangaroo</div>
+    </glossentry>
+    <glossentry>
+    <dt class="glossterm">ensnare</dt>
+<div class="glossdef">trap</div>
+    </glossentry>
+  </dl>
+
+</body>
+</html>

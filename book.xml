@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../../docbook.css"?>
+<!DOCTYPE book SYSTEM "/home/francisco/Documents/mis_escritos/precious/xml/DocBook/docbook.dtd" [
+  <!ENTITY string1 SYSTEM "string1.txt">
+]>
+<!-- A book in the DocBook vocabulary.
+     Elements: book, preface, part, chapter, title, para,
+               programlisting, blockquote, attribution,
+               itemizedlist, listitem, glossary
+     Processing Instruction: name=postscript
+
+     The purpose of this file is for other tools to test XSLT transformations on it.
+-->
+<book>
+
+  <info>
+    <title><emphasis>Sample DocBook</emphasis></title>
+    <subtitle>A DocBook Document to Transform</subtitle>
+    <abstract>
+      <para>This is a book holding DocBook elements for testing transformations. The abstract inside the info element under the book element contains text, not para[graph]s and other block elements containing text.</para>
+      <mediaobject>
+        <imageobject>
+          <!--<imagedata format='JPEG' fileref='my_image.jpg'/>-->
+        </imageobject>
+        <caption>An image</caption>
+      </mediaobject>
+    </abstract>
+
+    <keywordset>
+      <keyword>testing</keyword>
+      <keyword>docbook</keyword>
+      <keyword>XSLT</keyword>
+    </keywordset>
+
+    <subjectset scheme="libraryofcongress">
+      <subject>
+        <subjectterm>Electronic Publishing</subjectterm>
+        <subjectterm>Rhethoric for Non-Fiction Writers</subjectterm>
+      </subject>
+      <subject>
+        <subjectterm>SGML (Computer program language)</subjectterm>
+        <subjectterm>XML (a Syntax for Languages)</subjectterm>
+        <subjectterm>HTML (a SubSet of XML for the WWW)</subjectterm>
+      </subject>
+    </subjectset>
+
+    <author>
+      <personname>
+        <honorific>Mr</honorific>
+        <firstname>Francisco</firstname>
+        <surname>Fernández-Victorio Hernández</surname>
+      </personname>
+      <affiliation>
+        <shortaffil>ATI</shortaffil>
+        <jobtitle>Senior Application Analyst</jobtitle>
+        <orgname>Permaculture, Org.</orgname>
+        <orgdiv>Design and Implementation</orgdiv>
+      </affiliation>
+    </author>
+
+
+
+  </info>
+
+  <para><firstterm>Synthesis</firstterm> is a greek word meaning... (entity string1 points to file <filename>string1.txt</filename>, which actually holds <quote>&string1;</quote></para>
+  <para>Feed TeX these characters: &amp; # $ % ^ _ \ { } <!-- \ { and }--> </para>
+  
+  <preface>
+    <title>Introduction</title>
+    <para>The <quote>purpose</quote> of this is to test DocBook code and XSLT transformations.</para>
+  </preface>
+  
+  <?postscript gsave newpath 100 100 moveto 33 0 rlineto stroke grestore?>
+  <?aside
+  <title>Consequences</title>
+  <para>The Consequences are...</para>
+  ?>
+
+  <part xml:id="docbook-element-examples" ordering="2">
+    <info>
+      <title>DocBook Element Examples</title>
+    </info>
+
+    <chapter>
+      <title>Tables</title>
+
+      <table xml:id="an-HTML-table">
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+      </table>
+
+      <table xml:id="another-HTML-table" SQL-table="people" SQL-db="organization">
+        <tr>
+          <th>Co</th>
+          <th>Cntct</th>
+          <th>Cntry</th>
+        </tr>
+        <tr>
+          <td>Futterkiste</td>
+          <td>Anders</td>
+          <td>De</td>
+        </tr>
+        <tr>
+          <td>CC Moctezuma</td>
+          <td>Fco Chang</td>
+          <td>Mxc</td>
+        </tr>
+      </table>
+
+    </chapter>
+
+    <chapter>
+      <info>
+        <title>Lists*</title>
+      </info>
+
+      <bridgehead>A &lt;procedure&gt;:</bridgehead>
+      <procedure><title>An Example Procedure</title>
+        <step>
+          <para>A Step</para>
+        </step>
+        <step>
+          <para>Another Step</para>
+          <substeps>
+            <step>
+              <para>Substeps can be nested indefinitely deep.</para>
+            </step>
+          </substeps>
+        </step>
+        <step>
+          <para>A Final Step</para>
+        </step>
+      </procedure>
+
+      <bridgehead>A qandaset with no qandadiv&apos;s</bridgehead>
+      <qandaset>
+        <qandaentry>
+          <question>Is there a God?</question>
+          <answer>What do you mean by <quote>god</quote>?</answer>
+        </qandaentry>
+        <qandaentry>
+          <question>Is there a Creator?</question>
+          <answer>Perhaps the world created itself.</answer>
+        </qandaentry>
+        <qandaentry>
+          <question>No. The matter requires that something above the thing creates the thing.</question>
+          <answer>Well, perhaps that <quote>something above the thing</quote> is in the thing.</answer>
+        </qandaentry>
+        <qandaentry>
+          <question>question</question>
+          <answer>answer</answer>
+        </qandaentry>
+      </qandaset>
+
+
+      <bridgehead>A qandaset with two qandadiv&apos;s</bridgehead>
+      <qandaset>
+        <qandadiv>
+          <qandaentry>
+            <question>Is there a God?</question>
+            <answer>What do you mean by <quote>god</quote>?</answer>
+          </qandaentry>
+          <qandaentry>
+            <question>Is there a Creator?</question>
+            <answer>Perhaps the world created itself.</answer>
+          </qandaentry>
+          <qandaentry>
+            <question>No. The matter requires that something above the thing creates the thing.</question>
+            <answer>Well, perhaps that <quote>something above the thing</quote> is in the thing.</answer>
+          </qandaentry>
+          <qandaentry>
+            <question>question</question>
+            <answer>answer</answer>
+          </qandaentry>
+        </qandadiv>
+        <qandadiv>
+          <qandaentry>
+            <question>Where were you then?</question>
+            <answer>I was very far away, in the mountains.</answer>
+          </qandaentry>
+          <qandaentry>
+            <question>What were you doing in the mountains?</question>
+            <answer>I was having a skiing holiday.</answer>
+          </qandaentry>
+          <qandaentry>
+            <question>How can you be so sure about the exact time it happened then?</question>
+            <answer>I was speaking to her on the phone when suddenly her voice broke.</answer>
+          </qandaentry>
+          <qandaentry>
+            <question>question</question>
+            <answer>answer</answer>
+          </qandaentry>
+        </qandadiv>
+      </qandaset>
+
+
+    </chapter>
+
+    <chapter>
+      <title>Glossaries*</title>
+
+      <glossary>
+        <title>Example Glossary</title>
+        <para>This is not a real glossary, it's just an example.</para>
+        ...
+        <glossdiv>
+          <title>E</title>
+          <glossentry xml:id="xml">
+            <glossterm>Extensible Markup Language</glossterm>
+            <acronym>XML</acronym>
+            <glossdef>
+              <para>Some reasonable definition here.</para>
+              <glossseealso otherterm="sgml">SGML</glossseealso>
+            </glossdef>
+          </glossentry>
+        </glossdiv>
+        ...
+        <glossdiv>
+          <title>S</title>
+          <glossentry>
+            <glossterm>SGML</glossterm>
+            <glosssee otherterm="sgml"/>
+          </glossentry>
+          <glossentry xml:id="sgml">
+            <glossterm>Standard Generalized Markup Language</glossterm>
+            <acronym>SGML</acronym>
+            <abbrev>ISO 8879:1986</abbrev>
+            <glossdef>
+              <para>Some reasonable definition here.</para>
+              <glossseealso otherterm="xml">XML</glossseealso>
+            </glossdef>
+          </glossentry>
+        </glossdiv>
+      </glossary>
+
+    </chapter>
+
+    <chapter>
+      <title>Mathematics*</title>
+    </chapter>
+
+    <chapter>
+      <title>SVG*</title>
+    </chapter>
+
+    <chapter>
+      <title>Other*</title>
+      <note>Herein live other DocBook elements that want tranforming into HTML...</note>
+      <tip>I&apos;ll give you some valuable piece of advice...</tip>
+    </chapter>
+
+  </part>
+  
+  <part xml:id="science-and-technology"  ordering="1">
+    <title linkend='www.google.com'>(P1) Science and Technology</title>
+    <para>Technology means applied science.<!--<footnote>entiéndase con ello lo que se entienda...</footnote>--></para>
+    <para>I love <userinput>\TeX</userinput>.</para>
+    
+    <chapter class="private">
+      <title>Science</title>
+      <subtitle>A compendium of knowledge</subtitle>
+      <para>Here&apos;s  a spaced  out
+
+        paragraph...
+      </para>
+      <equation><alt>\epsilon > 0</alt></equation>
+      <para>Here&apos;s a <sgmltag>sgmltag</sgmltag>...</para>
+      <para>Here&apos;s <emphasis>another</emphasis> paragraph...</para>
+      <programlisting>mov R1, R2;
+cmp #0, R1;</programlisting>
+
+       <bridgehead>Some lists</bridgehead>
+       <para>First, a docbook:variablelist:</para>
+       <variablelist>
+         <varlistentry>
+           <term>TERMNAME</term>
+           <listitem>CONTENTS OR LONGER DESCRIPTION</listitem>
+         </varlistentry>
+       </variablelist>
+    </chapter>    
+    
+    <chapter>
+      <title>Technology</title>
+      <para>Here&apos;s a technological paragraph...</para>
+      <blockquote>
+        <para>Here&apos;s a technological blockquote...</para>
+        <attribution>Whoever</attribution>
+      </blockquote>
+      <itemizedlist>
+        <listitem>first item</listitem>
+        <listitem>second item</listitem>
+        <listitem>third item</listitem>
+      </itemizedlist>
+      <para>Here&apos;s <emphasis>another</emphasis> paragraph...</para>
+    </chapter>    
+    
+    <chapter>
+      <title>Ethics</title>
+      <para>Here&apos;s a paragraph...</para>
+      <blockquote>Here&apos;s a quote...</blockquote>
+      <para>Here&apos;s another paragraph...</para>
+      <sect1> <title>Aristoteles</title> <para>Arrr</para></sect1>
+      <sect1> <title>Plotinus</title>
+        <sect2><title>Early Plotinus</title><para>P1...</para></sect2>
+        <sect2><title>Late Plotinus</title><para>P2...</para></sect2>
+      </sect1>
+    </chapter>    
+    
+  </part>
+
+  <part lang='es' ordering="3">
+    <title>(P2) Religion</title>
+    <para xml:lang='html'>Should religion teaches us how to lead our lives?</para>
+  </part>
+  
+  <appendix>
+    <title>Tables in DocBook</title>
+    <para>Tables cannot be displayed in the EPUB format, so this appendix is written with typographical systems (TeX) in mind.</para>
+    
+    <sect1>
+      <title>HTML Tables</title>
+      <para>First, I shall present some very simle tables. Our first table is made up of <userinput>row</userinput> elements holding <userinput>th</userinput> elements:</para>
+      <table style="width:100%">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+        </table>
+
+    </sect1>
+      
+      
+    <sect1>
+      <title>CALS Tables</title>
+      <para>A CALS table has a <userinput>tgroup</userinput> element, thereby to be distinquished from HTML tables.</para>
+    <!--
+    
+    The Table element identifies a formal table. DocBook uses the CALS table model, which describes tables geometrically using rows, columns, and cells.
+    Tables may include column headers and footers, but there is no provision for row headers. 
+    
+    Attributes besides common attributes and linking attributes:
+    colsep
+    floatstyle
+    frame = { “all” | “bottom” | “none” | “sides” | “top” | “topbot” }
+    orient = { “land” | “port” }
+    pgwide = { “0” | “1” }
+    rowheader = { “firstcol” | “norowheader” }
+    rowsep
+    shortentry = { “0” | “1”}
+    tabstyle
+    tocentry = { “0” | “1” }
+    -->
+    
+    
+      <table xml:id="ex.calstable" frame='all'>
+        <title>Sample CALS Table</title>
+
+        <tgroup cols='5' align='left' colsep='1' rowsep='1'>
+          <colspec colname='c1'/>
+          <colspec colname='c2'/>
+          <colspec colname='c3'/>
+          <colspec colnum='5' colname='c5'/>
+          
+          <thead>
+            <row>
+              <entry namest="c1" nameend="c2" align="center">Horizontal Span</entry>
+              <entry>a3</entry>
+              <entry>a4</entry>
+              <entry>a5</entry>
+            </row>
+          </thead>
+          
+          <tfoot>
+            <row>
+              <entry>f1</entry>
+              <entry>f2</entry>
+              <entry>f3</entry>
+              <entry>f4</entry>
+              <entry>f5</entry>
+            </row>
+          </tfoot>
+          
+          <tbody>
+            <row>
+              <entry>b1</entry>
+              <entry>b2</entry>
+              <entry>b3</entry>
+              <entry>b4</entry>
+              <entry morerows='1' valign='middle'><para>Vertical Span</para></entry>
+            </row>
+            <row>
+              <entry>c1</entry>
+              <entry namest="c2" nameend="c3" align='center' morerows='1' valign='bottom'>Span Both</entry>
+              <entry>c4</entry>
+            </row>
+            <row>
+              <entry>d1</entry>
+              <entry>d4</entry>
+              <entry>d5</entry>
+            </row>
+          </tbody>
+          
+        </tgroup>
+        
+      </table>  <!-- end of CALS 'table' element -->
+      
+    </sect1>  <!-- end of "CALS Tables" -->
+
+  </appendix>
+
+  <glossary>
+    <glossentry>
+    <glossterm>wallaby</glossterm><glossdef>small kangaroo</glossdef>
+    </glossentry>
+    <glossentry>
+    <glossterm>ensnare</glossterm><glossdef>trap</glossdef>
+    </glossentry>
+  </glossary>
+
+</book>

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<book>
+  <title>Synthesis</title>
+  <para>Feed TeX these characters: </para>
+  
+  <preface>
+    <title>Introducción</title>
+    <para>The <quote>purpose</quote> of this <sgmltag>book</sgmltag> is...</para>
+  </preface>
+  
+  
+
+  <part>
+    <title>Ciencia y Tecnología</title>
+    <para>La tecnología aplica  la ciencia. </para>
+    <para>I love <userinput>\TeX</userinput>.</para>
+        
+    <chapter>
+      <title>Tecnología</title>
+      <para>Here's a technological paragraph...</para>
+      <blockquote>
+        <para>Here's a technological blockquote...</para>
+        <attribution>Whoever</attribution>
+      </blockquote>
+      <itemizedlist>
+        <listitem>first item</listitem>
+        <listitem>second item</listitem>
+        <listitem>third item</listitem>
+      </itemizedlist>
+      <para>Here's <emphasis>another</emphasis> paragraph...</para>
+    </chapter>    
+    <chapter>
+      <title>Etica</title>
+      <para>Here's a paragraph...</para>
+      <blockquote>Here's a quote...</blockquote>
+      <para>Here's another paragraph...</para>
+      <sect1> <title>Aristoteles</title> <para>Arrr</para></sect1>
+      <sect1> <title>Plotinus</title>
+        <sect2><title>Early Plotinus</title><para>P1...</para></sect2>
+        <sect2><title>Late Plotinus</title><para>P2...</para></sect2>
+      </sect1>
+    </chapter>    
+  </part>
+
+  <part lang="es">
+    <title>Religión</title>
+    <para/>
+  </part>
+
+  <glossary>
+    <heading>wallaby</heading><definition>small kangaroo</definition>
+    <heading>ensnare</heading><definition>trap</definition>
+  </glossary>
+
+</book>

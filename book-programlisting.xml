@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE book SYSTEM "/home/francisco/Documents/mis_escritos/precious/xml/DocBook/docbook.dtd" [
+  <!ENTITY string1 SYSTEM "string1.txt">
+]>
+<!-- Researching the programlisting element
+     Elements: book, preface, part, chapter, title, para,
+               programlisting, blockquote, attribution,
+               itemizedlist, listitem, glossary, heading
+     Processing Instruction: name=postscript
+
+     The purpose of this file is for other tools to test XSLT transformations on it.
+-->
+<book>
+  <title>Programming Constructs</title>
+  
+  
+  <chapter>
+    <title>Programming</title>
+    <programlisting>mov R1, R2;
+cmp #0, R1;</programlisting>
+  </chapter>
+  
+</book>
