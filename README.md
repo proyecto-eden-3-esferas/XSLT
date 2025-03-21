@@ -2,6 +2,8 @@
 
 Stylesheets, snippets and guidelines for transforming between and inside DocBook, HTML, possibly also JSON
 
+As of 21st of March, 2025, all files in   ~/francisco/Documents/mis_escritos/precious/psimple/Electric_files/XSLT_code with extensions `xsl` (XSTL), `xml` (DocBook), `html` (web pages) and the *Makefile* file have been uploaded. I haven't yet uploaded directories: borrowed_or_pro/, bulk/, from_html/, HTML2HTML/, pull_processing/, and xml_to_tex/
+
 XSLT is a _language_ for transforming from some XML to other XML or to anything else. __XML__ is a syntax specification for writing texts as well as images (SVG), music score (MusicML), mathematical formulas (MathML), even databases. SVG, MusicML, and MathML are just vocabularies. HTML is the XML vocabulary web pages are written in.
 
 I shall be using the free xsltproc command to effect transformations. Basic usage:
