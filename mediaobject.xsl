@@ -49,13 +49,12 @@ A wrapper for a text description of an object and its associated meta-informatio
 <xsl:template match="mediaobject | imageobject | audioobject | videoobject | textobject" >
   <xsl:apply-templates select="*|@*|text()|comment()"/>
 </xsl:template>
-<xsl:template match="imagedata">
+
+<xsl:template match="imagedata[@fileref]">
   <xsl:element name="img">
     <xsl:attribute name="class">imagedata</xsl:attribute>
     <xsl:attribute name="src"><xsl:value-of select="@fileref"/></xsl:attribute>
   </xsl:element>
 </xsl:template>
-
-
 
 </xsl:stylesheet>

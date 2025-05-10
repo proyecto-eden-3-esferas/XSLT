@@ -120,4 +120,12 @@ Attribute 'path' specifies the path of the filename
   </xsl:element>
 </xsl:template>
 
+<xsl:template match="application">
+  <xsl:element name="code">
+    <xsl:attribute name="class">application</xsl:attribute>
+    <xsl:apply-templates select="*|@*|text()|comment()"/>
+  </xsl:element>
+</xsl:template>
+
+
 </xsl:stylesheet>

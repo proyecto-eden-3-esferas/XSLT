@@ -47,9 +47,13 @@
 </xsl:template>
 
 <!-- Copy all elements, attributes, and text nodes -->
-<xsl:template match="*|@*|text()|comment()">
+<xsl:template match="@*|*|text()|comment()">
   <xsl:copy>
-    <xsl:apply-templates select="*|@*|text()|comment()"/>
+    <!--
+    <xsl:apply-templates select="@*"/>
+    <xsl:apply-templates select="   *|text()|comment()"/>
+    -->
+    <xsl:apply-templates select="@*|*|text()|comment()"/>
   </xsl:copy>
 </xsl:template>
 

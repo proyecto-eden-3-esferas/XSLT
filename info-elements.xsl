@@ -168,6 +168,34 @@ wrapper in the common case where all you want to specify is a title.
 
 
 
+
+<xsl:template match="chapter/bridgehead | chapter/info/bridgehead">
+  <xsl:element name="h3">
+    <xsl:attribute name="class">bridgehead</xsl:attribute>
+    <xsl:apply-templates select="*|@*|text()|comment()"/>
+  </xsl:element>
+</xsl:template>
+<xsl:template match="chapter/*/bridgehead | chapter/*/info/bridgehead">
+  <xsl:element name="h4">
+    <xsl:attribute name="class">bridgehead</xsl:attribute>
+    <xsl:apply-templates select="*|@*|text()|comment()"/>
+  </xsl:element>
+</xsl:template>
+<xsl:template match="chapter/*/*/bridgehead | chapter/*/*/info/bridgehead">
+  <xsl:element name="h5">
+    <xsl:attribute name="class">bridgehead</xsl:attribute>
+    <xsl:apply-templates select="*|@*|text()|comment()"/>
+  </xsl:element>
+</xsl:template>
+<xsl:template match="//bridgehead">
+  <xsl:element name="h5">
+    <xsl:attribute name="class">bridgehead</xsl:attribute>
+    <xsl:apply-templates select="*|@*|text()|comment()"/>
+  </xsl:element>
+</xsl:template>
+
+
+
 <xsl:template match="abstract">
   <xsl:element name="div">
     <xsl:attribute name="class">abstract</xsl:attribute>
